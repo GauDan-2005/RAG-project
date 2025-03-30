@@ -1,0 +1,33 @@
+# Virtual Environment
+rag_env/
+*.venv/
+env/
+venv/
+pyvenv.cfg
+
+# Python Bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment Variables
+.env
+
+# Logs and Output
+*.log
+*.out
+
+# Milvus Data
+milvus_data/
+
+# Docker
+volumes/
+*.dockerignore
+
+# Chainlit Cache
+.chainlit/
+
+# System Files
+.DS_Store
+Thumbs.db
