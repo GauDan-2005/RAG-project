@@ -13,7 +13,7 @@ This project implements a chatbot using **Chainlit, Langchain, Milvus, and OpenA
 - **Frontend:** Chainlit
 - **Backend:** Python (FastAPI/Flask)
 - **Database:** Milvus
-- **Embedding Model:** OpenAI/LLaMA 3.3
+- **Embedding Model:** OLLaMA 3.2
 - **Orchestration:** Langchain
 
 ## Installation
