@@ -1,3 +1,7 @@
+# -----CONNECT MILVUS-----
+
+from milv import database
+
 # ----- GET URLS -----
 
 from extract_url import get_sitemap_urls
@@ -13,10 +17,13 @@ print(urls[:5])  # Print first 5 URLs
 
 from extract_content import fetch_website_contents
 
-website_data = fetch_website_contents(urls, max_pages=2, delay=1.0, preview_length=500)
+max_pages = 5
+
+print(f"Extracting {max_pages} from {len(urls)}")
 
 
-# -----CONNECT MILVUS-----
+website_data = fetch_website_contents(urls, max_pages=max_pages, delay=1.0, preview_length=500)
 
-from milv import database
+print(f"Extracted {len(website_data)} from {len(urls)}")
+
 

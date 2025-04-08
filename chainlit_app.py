@@ -1,7 +1,7 @@
 import chainlit as cl
 from langchain_core.runnables import RunnableParallel
 
-# from app import rag_chain
+from app import rag_chain
 
 # System message with typing animation
 WELCOME_MESSAGE = """👋 Welcome to the **Kitchener City Assistant**! 

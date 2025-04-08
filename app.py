@@ -36,7 +36,7 @@ Sources: [comma-separated URLs]"""
 
 prompt = ChatPromptTemplate.from_template(source_template)
 
-# Custom output parser to extract sources
+# Output parser
 def extract_sources(output):
     if "Sources:" in output:
         answer, sources = output.split("Sources:")
@@ -53,6 +53,6 @@ rag_chain = (
 )
 
 # 4. Test the full pipeline
-# query = "What are the requirements for getting a building permit in Kitchener?"
-# result = rag_chain.invoke(query)
-# print(result)
+query = "What is Kitchener?"
+result = rag_chain.invoke(query)
+print(result)

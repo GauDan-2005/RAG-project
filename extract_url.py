@@ -18,3 +18,4 @@ def get_sitemap_urls(sitemap_url):
         return urls
     return []
 
+# sitemap -->all the urls website

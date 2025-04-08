@@ -2,13 +2,20 @@ from bs4 import BeautifulSoup
 import time
 import requests
 
+
 def fetch_page_content(url):
     try:
         response = requests.get(url, timeout=10)
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, "html.parser")
-            text = ' '.join([p.get_text() for p in soup.find_all("p")])  # Extract text from <p> tags
-            return text.strip()
+            
+            # Find all relevant elements in the order they appear on the page
+            content_elements = soup.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'a'])
+            
+            # Extract text from the elements
+            full_text = ' '.join([element.get_text() for element in content_elements])
+            
+            return full_text.strip()
         else:
             print(f"Failed to fetch {url} - Status Code:", response.status_code)
             return None
